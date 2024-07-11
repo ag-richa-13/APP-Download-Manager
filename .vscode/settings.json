@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "App Downloader.sln"
+    "dotnet.defaultSolution": "APP-Download-Manager.sln"
 }
