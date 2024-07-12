@@ -7,10 +7,12 @@ public class DownloadManager : MonoBehaviour
     [SerializeField] private Button DownloadButton;
     [SerializeField] private TMP_Text progressText;
     [SerializeField] private Slider progressBar;
+    [SerializeField] private GameObject progress;
     private AndroidJavaObject currentActivity;
 
     void Start()
     {
+        progress.gameObject.SetActive(false);
         try
         {
             using (AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer"))
@@ -27,6 +29,7 @@ public class DownloadManager : MonoBehaviour
 
     public void DownloadAPK()
     {
+        progress.gameObject.SetActive(true);
         try
         {
             if (currentActivity != null)
